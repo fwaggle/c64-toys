@@ -79,7 +79,8 @@ uppercase
 ; every 15 frames, then reset it before returning.
 SOFTSCROLL
 	ldx #$7
-scrlloop	stx $d016
+scrlloop	
+	stx $d016
 	lda #$10 ; delay for ~0x10 frames
 	sta delay
 pause	lda $d012 ; wait for screen frame
@@ -95,7 +96,8 @@ pause	lda $d012 ; wait for screen frame
 	
 	rts
 	
-textdata	.text "@fwaggle was here, WAY back in 2015. Hope you "
+textdata	
+	.text "@fwaggle was here, WAY back in 2015. Hope you "
 	.text "enjoy the show! This is a simple yet somewhat "
 	.text "pretty smooth soft-scroller, written in ASM "
 	.text "for TMPx/TMP. Your mileage may vary, batteries "
